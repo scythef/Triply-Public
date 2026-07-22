@@ -3,14 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Triply</title>
+  <title>Triply — Know where your group is</title>
+  <meta name="description" content="Triply is a privacy-first, real-time location sharing app for trips, hikes, rides, ski days, and group events.">
+  <link rel="icon" href="assets/icon.png" type="image/png">
   <style>
+    :root {
+      --bg: #070b14;
+      --text: #f5f7fb;
+      --muted: #aab4c8;
+      --green: #7cb342;
+      --blue: #29b6f6;
+      --purple: #8e6fce;
+      --orange: #ff7a45;
+      --line: rgba(255,255,255,.12);
+      --card: rgba(255,255,255,.05);
+    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #f8f9fa;
-      color: #212529;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(124,179,66,.18), transparent 40%),
+        radial-gradient(circle at 85% 15%, rgba(41,182,246,.18), transparent 40%),
+        radial-gradient(circle at 20% 90%, rgba(142,111,206,.16), transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(255,122,69,.16), transparent 40%),
+        var(--bg);
+      color: var(--text);
       line-height: 1.7;
       min-height: 100vh;
       display: flex;
@@ -21,45 +39,89 @@
       padding: 2rem;
     }
 
-    .logo {
+    .logo-mark {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 10px 40px rgba(0,0,0,.45);
+    }
+
+    .brand {
       font-size: 3rem;
       font-weight: 800;
-      color: #1a73e8;
       letter-spacing: -1px;
       margin-bottom: 0.5rem;
+      background: linear-gradient(90deg, var(--green), var(--blue), var(--purple), var(--orange));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .tagline {
-      font-size: 1.1rem;
-      color: #6c757d;
+      font-size: 1.15rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      max-width: 480px;
+    }
+
+    .pillars {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
       margin-bottom: 2.5rem;
     }
+
+    .pillar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .pillar.hike { color: var(--green); border-color: rgba(124,179,66,.5); }
+    .pillar.ride { color: var(--blue); border-color: rgba(41,182,246,.5); }
+    .pillar.ski  { color: var(--purple); border-color: rgba(142,111,206,.5); }
+    .pillar.event{ color: var(--orange); border-color: rgba(255,122,69,.5); }
 
     nav a {
       display: inline-block;
       margin: 0.4rem 0.8rem;
-      color: #1a73e8;
+      color: var(--text);
       text-decoration: none;
       font-size: 1rem;
       font-weight: 500;
       border-bottom: 2px solid transparent;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, color 0.2s;
     }
 
-    nav a:hover { border-color: #1a73e8; }
+    nav a:hover { border-color: var(--blue); color: var(--blue); }
 
     footer {
       position: fixed;
       bottom: 1rem;
       font-size: 0.8rem;
-      color: #adb5bd;
+      color: #66708a;
     }
   </style>
 </head>
 <body>
 
-  <div class="logo">Triply</div>
-  <p class="tagline">Your smart travel companion</p>
+  <img class="logo-mark" src="assets/icon.png" alt="Triply app icon">
+  <div class="brand">Triply</div>
+  <p class="tagline">Privacy-first, real-time location sharing for trips, hikes, rides, ski days, and group events. No account required.</p>
+
+  <div class="pillars">
+    <span class="pillar hike">🥾 Hikes</span>
+    <span class="pillar ride">🚵 Rides</span>
+    <span class="pillar ski">⛷️ Ski Days</span>
+    <span class="pillar event">🎉 Events</span>
+  </div>
 
   <nav>
     <a href="privacy-policy.html">Privacy Policy</a>
@@ -67,7 +129,7 @@
     <a href="support.html">Support</a>
   </nav>
 
-  <footer>&copy; 2026 Triply. All rights reserved.</footer>
+  <footer>&copy; 2026 Triply. Privacy-First • Real-Time • Groups</footer>
 
 </body>
 </html>

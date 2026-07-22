@@ -4,151 +4,132 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms and Conditions – Triply</title>
+  <meta name="description" content="Triply terms of use">
+  <link rel="icon" href="assets/icon.png" type="image/png">
   <style>
+    :root {
+      --bg: #070b14;
+      --text: #f5f7fb;
+      --muted: #aab4c8;
+      --green: #7cb342;
+      --blue: #29b6f6;
+      --purple: #8e6fce;
+      --orange: #ff7a45;
+      --line: rgba(255,255,255,.12);
+      --card: rgba(255,255,255,.05);
+    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #f8f9fa;
-      color: #212529;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255,122,69,.14), transparent 35%),
+        radial-gradient(circle at 90% 100%, rgba(124,179,66,.12), transparent 35%),
+        var(--bg);
+      color: var(--text);
       line-height: 1.7;
     }
 
-    header {
-      background: #1a73e8;
-      color: #fff;
-      padding: 2rem 1.5rem;
-      text-align: center;
+    main { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+
+    header.top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    header.top img { width: 48px; height: 48px; border-radius: 12px; }
+    header.top .brand {
+      font-size: 1.4rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--green), var(--blue), var(--purple), var(--orange));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
-    header h1 { font-size: 2rem; font-weight: 700; }
-    header p  { margin-top: 0.4rem; opacity: 0.85; font-size: 0.95rem; }
+    h1 { font-size: clamp(28px, 5vw, 42px); margin: 0.5rem 0 0.3rem; }
+    .last-updated { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; }
 
-    main {
-      max-width: 800px;
-      margin: 2.5rem auto;
-      padding: 0 1.5rem 3rem;
-    }
+    nav.pages { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem; }
+    nav.pages a { text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; color: var(--text); font-size: 0.9rem; transition: border-color .2s, color .2s; }
+    nav.pages a:hover { border-color: var(--orange); color: var(--orange); }
 
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 2.5rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,.08);
-    }
+    h2 { font-size: 1.35rem; color: var(--text); margin: 2rem 0 0.7rem; padding-bottom: 0.4rem; border-bottom: 2px solid rgba(255,122,69,.25); }
+    h2:first-of-type { margin-top: 0; }
 
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #1a73e8;
-      margin: 2rem 0 0.6rem;
-      border-bottom: 2px solid #e8f0fe;
-      padding-bottom: 0.4rem;
-    }
-
-    h2:first-child { margin-top: 0; }
-
-    p  { margin-bottom: 0.9rem; }
-    ul { margin: 0.4rem 0 0.9rem 1.4rem; }
-    li { margin-bottom: 0.35rem; }
-
-    a  { color: #1a73e8; text-decoration: none; }
+    p, li { color: var(--muted); font-size: 1.02rem; margin-bottom: 0.6rem; }
+    ul { padding-left: 1.4rem; margin-bottom: 0.9rem; }
+    strong { color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    .last-updated {
-      font-size: 0.85rem;
-      color: #6c757d;
-      margin-bottom: 1.5rem;
-    }
-
-    footer {
+    footer.site {
       text-align: center;
       padding: 1.5rem;
       font-size: 0.82rem;
-      color: #6c757d;
+      color: #66708a;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Triply</h1>
-  <p>Terms and Conditions</p>
-</header>
-
 <main>
-  <div class="card">
-    <p class="last-updated">Last updated: July 22, 2026</p>
+  <header class="top">
+    <img src="assets/icon.png" alt="Triply app icon">
+    <div class="brand">Triply</div>
+  </header>
 
-    <h2>1. Acceptance of Terms</h2>
-    <p>
-      By downloading, accessing, or using <strong>Triply</strong> (the “App”), you agree to be
-      bound by these Terms and Conditions. If you do not agree to these terms, do not use the App.
-    </p>
+  <h1>Terms of Use</h1>
+  <p class="last-updated">Last updated: 22 July 2026</p>
 
-    <h2>2. Use of the App</h2>
-    <p>You agree to use the App only for lawful purposes and in accordance with these terms.</p>
-    <ul>
-      <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
-      <li>You must not misuse the App by introducing malicious code or attempting unauthorized access.</li>
-      <li>You must not use the App in a way that disrupts service for other users.</li>
-    </ul>
+  <nav class="pages">
+    <a href="index.html">Home</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-and-conditions.html">Terms and Conditions</a>
+    <a href="support.html">Support</a>
+  </nav>
 
-    <h2>3. User Content</h2>
-    <p>
-      You retain ownership of travel plans, notes, and other content you submit to the App.
-      You grant Triply a limited license to process that content solely to provide App services.
-    </p>
+  <h2>1. Acceptance of Terms</h2>
+  <p>By using Triply, the user agrees to these Terms of Use. If the user does not agree with these terms, the user should not use Triply.</p>
 
-    <h2>4. Intellectual Property</h2>
-    <p>
-      The App, including its branding, design, text, graphics, and software, is owned by Triply
-      and protected by applicable intellectual property laws. You may not copy, modify, distribute,
-      or reverse engineer any part of the App except as permitted by law.
-    </p>
+  <h2>2. Purpose of Triply</h2>
+  <p>Triply is a group location sharing application for trips, outdoor activities, events, and group coordination. Triply helps members of the same trip see each other on a map while location sharing is active.</p>
 
-    <h2>5. Third-Party Services</h2>
-    <p>
-      The App may rely on third-party services (for example, hosting, analytics, or mapping).
-      Triply is not responsible for third-party service availability, terms, or privacy practices.
-    </p>
+  <h2>3. Location Sharing Responsibilities</h2>
+  <p>Location sharing can reveal sensitive information. The user is responsible for deciding when to share location, which trips to join, and who to invite. The user should only share trip links or invite codes with people the user trusts.</p>
 
-    <h2>6. Disclaimers</h2>
-    <p>
-      The App is provided on an “as is” and “as available” basis without warranties of any kind,
-      whether express or implied, including merchantability, fitness for a particular purpose,
-      and non-infringement.
-    </p>
+  <h2>4. No Emergency or Safety Guarantee</h2>
+  <p>Triply is not an emergency service, rescue service, safety monitoring service, or security service. Triply should not be used as the only tool for safety-critical situations. Location data may be delayed, unavailable, inaccurate, or interrupted due to device settings, network conditions, battery settings, operating system behavior, or service issues.</p>
 
-    <h2>7. Limitation of Liability</h2>
-    <p>
-      To the maximum extent permitted by law, Triply will not be liable for any indirect,
-      incidental, special, consequential, or punitive damages arising from your use of the App.
-    </p>
+  <h2>5. Acceptable Use</h2>
+  <p>The user agrees not to misuse Triply. The user must not use Triply to stalk, harass, track, threaten, impersonate, or monitor another person without appropriate consent. The user must not attempt to access trips, data, systems, or services without authorization.</p>
 
-    <h2>8. Termination</h2>
-    <p>
-      We may suspend or terminate access to the App if you violate these terms or if required
-      for legal, operational, or security reasons.
-    </p>
+  <h2>6. User Content and Trip Information</h2>
+  <p>The user is responsible for information the user creates or shares through Triply, including trip names, invite links, and location sharing activity. Triply may remove or restrict access to content or trips if needed to protect users, comply with law, or operate the service.</p>
 
-    <h2>9. Changes to These Terms</h2>
-    <p>
-      We may update these Terms and Conditions from time to time. Continued use of the App
-      after changes become effective constitutes acceptance of the updated terms.
-    </p>
+  <h2>7. Service Availability</h2>
+  <p>Triply is provided on an "as is" and "as available" basis. Triply may change, suspend, or discontinue features at any time. Triply does not guarantee uninterrupted availability, accuracy, or performance.</p>
 
-    <h2>10. Contact</h2>
-    <p>
-      For questions regarding these Terms and Conditions, contact us at
-      <a href="mailto:support@triply.app">support@triply.app</a>.
-    </p>
-  </div>
+  <h2>8. Privacy</h2>
+  <p>Triply's handling of data is described in the <a href="privacy-policy.html">Privacy Policy</a>. By using Triply, the user acknowledges that location sharing is the core function of the app.</p>
+
+  <h2>9. Intellectual Property</h2>
+  <p>Triply, including its name, branding, design, and software, is protected by applicable intellectual property laws. The user may not copy, modify, distribute, reverse engineer, or create derivative works from Triply except where allowed by law.</p>
+
+  <h2>10. Limitation of Liability</h2>
+  <p>To the maximum extent permitted by law, Triply and its creators are not liable for indirect, incidental, special, consequential, or punitive damages, or for loss of data, location accuracy, availability, profits, or goodwill arising from use of the app.</p>
+
+  <h2>11. Changes to These Terms</h2>
+  <p>Triply may update these Terms of Use from time to time. The updated version will be posted on this page with a new "Last updated" date.</p>
+
+  <h2>12. Contact</h2>
+  <p>For questions about these Terms, contact <a href="mailto:rehoricsapps@gmail.com">rehoricsapps@gmail.com</a>.</p>
 </main>
 
-<footer>
-  &copy; 2026 Triply. All rights reserved.
-</footer>
+<footer class="site">&copy; 2026 Triply. Know where your group is.</footer>
 
 </body>
 </html>

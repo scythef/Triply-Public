@@ -4,211 +4,171 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy – Triply</title>
+  <meta name="description" content="Triply privacy policy">
+  <link rel="icon" href="assets/icon.png" type="image/png">
   <style>
+    :root {
+      --bg: #070b14;
+      --text: #f5f7fb;
+      --muted: #aab4c8;
+      --green: #7cb342;
+      --blue: #29b6f6;
+      --purple: #8e6fce;
+      --orange: #ff7a45;
+      --line: rgba(255,255,255,.12);
+      --card: rgba(255,255,255,.05);
+    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #f8f9fa;
-      color: #212529;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(41,182,246,.14), transparent 35%),
+        radial-gradient(circle at 90% 100%, rgba(142,111,206,.12), transparent 35%),
+        var(--bg);
+      color: var(--text);
       line-height: 1.7;
     }
 
-    header {
-      background: #1a73e8;
-      color: #fff;
-      padding: 2rem 1.5rem;
-      text-align: center;
+    main { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+
+    header.top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    header.top img { width: 48px; height: 48px; border-radius: 12px; }
+    header.top .brand {
+      font-size: 1.4rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--green), var(--blue), var(--purple), var(--orange));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
-    header h1 { font-size: 2rem; font-weight: 700; }
-    header p  { margin-top: 0.4rem; opacity: 0.85; font-size: 0.95rem; }
+    h1 { font-size: clamp(28px, 5vw, 42px); margin: 0.5rem 0 0.3rem; }
+    .last-updated { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.5rem; }
 
-    main {
-      max-width: 800px;
-      margin: 2.5rem auto;
-      padding: 0 1.5rem 3rem;
-    }
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; margin: 1rem 0 1.5rem; }
+    .badge { border: 1px solid rgba(41,182,246,.5); color: var(--blue); border-radius: 999px; padding: 6px 13px; font-size: 13px; font-weight: 650; }
 
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 2.5rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,.08);
-    }
+    nav.pages { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 2rem; }
+    nav.pages a { text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; color: var(--text); font-size: 0.9rem; transition: border-color .2s, color .2s; }
+    nav.pages a:hover { border-color: var(--blue); color: var(--blue); }
 
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #1a73e8;
-      margin: 2rem 0 0.6rem;
-      border-bottom: 2px solid #e8f0fe;
-      padding-bottom: 0.4rem;
-    }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; margin: 1.5rem 0; }
 
-    h2:first-child { margin-top: 0; }
+    h2 { font-size: 1.35rem; color: var(--text); margin: 2rem 0 0.7rem; padding-bottom: 0.4rem; border-bottom: 2px solid rgba(41,182,246,.25); }
+    h2:first-of-type { margin-top: 0; }
 
-    p  { margin-bottom: 0.9rem; }
-    ul { margin: 0.4rem 0 0.9rem 1.4rem; }
-    li { margin-bottom: 0.35rem; }
-
-    a  { color: #1a73e8; text-decoration: none; }
+    p, li { color: var(--muted); font-size: 1.02rem; margin-bottom: 0.6rem; }
+    ul { padding-left: 1.4rem; margin-bottom: 0.9rem; }
+    strong { color: var(--text); }
+    a { color: var(--blue); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    .last-updated {
-      font-size: 0.85rem;
-      color: #6c757d;
-      margin-bottom: 1.5rem;
-    }
-
-    footer {
+    footer.site {
       text-align: center;
       padding: 1.5rem;
       font-size: 0.82rem;
-      color: #6c757d;
+      color: #66708a;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Triply</h1>
-  <p>Privacy Policy</p>
-</header>
-
 <main>
+  <header class="top">
+    <img src="assets/icon.png" alt="Triply app icon">
+    <div class="brand">Triply</div>
+  </header>
+
+  <h1>Privacy Policy</h1>
+  <p class="last-updated">Last updated: 22 July 2026</p>
+  <div class="badges"><span class="badge">Privacy-First</span><span class="badge">Real-Time</span><span class="badge">Groups</span></div>
+
+  <nav class="pages">
+    <a href="index.html">Home</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-and-conditions.html">Terms and Conditions</a>
+    <a href="support.html">Support</a>
+  </nav>
+
   <div class="card">
-    <p class="last-updated">Last updated: July 22, 2026</p>
-
-    <h2>1. Introduction</h2>
-    <p>
-      Welcome to <strong>Triply</strong>. We are committed to protecting your personal information
-      and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and
-      safeguard your information when you use our mobile application (<em>the "App"</em>).
-    </p>
-    <p>
-      Please read this policy carefully. If you disagree with its terms, please discontinue use
-      of the App.
-    </p>
-
-    <h2>2. Information We Collect</h2>
-    <p>We may collect the following categories of information:</p>
-    <ul>
-      <li>
-        <strong>Account information</strong> – name and email address when you register or sign in.
-      </li>
-      <li>
-        <strong>Trip data</strong> – destinations, travel dates, itineraries, and notes you
-        create within the App.
-      </li>
-      <li>
-        <strong>Device information</strong> – device type, operating system version, and
-        unique device identifiers used for analytics and crash reporting.
-      </li>
-      <li>
-        <strong>Usage data</strong> – features you interact with and session duration, collected
-        to improve the App experience.
-      </li>
-      <li>
-        <strong>Location data</strong> – approximate or precise location, only when you
-        explicitly grant permission, to provide location-aware features.
-      </li>
-    </ul>
-    <p>We do <strong>not</strong> collect sensitive personal data such as financial information,
-       health data, or government-issued identification numbers.</p>
-
-    <h2>3. How We Use Your Information</h2>
-    <p>We use the information we collect to:</p>
-    <ul>
-      <li>Provide, operate, and maintain the App and its features.</li>
-      <li>Personalise and improve your experience.</li>
-      <li>Analyse usage trends to enhance functionality and performance.</li>
-      <li>Communicate with you about updates, support, and promotional offers (where you have
-          opted in).</li>
-      <li>Detect, prevent, and address technical issues or fraudulent activity.</li>
-    </ul>
-
-    <h2>4. Sharing of Your Information</h2>
-    <p>
-      We do <strong>not</strong> sell, trade, or rent your personal information to third parties.
-      We may share information only in the following limited circumstances:
-    </p>
-    <ul>
-      <li>
-        <strong>Service providers</strong> – trusted third-party vendors that help us operate
-        the App (e.g. cloud hosting, analytics) under strict data-processing agreements.
-      </li>
-      <li>
-        <strong>Legal requirements</strong> – when required by law, court order, or governmental
-        authority.
-      </li>
-      <li>
-        <strong>Business transfers</strong> – in connection with a merger, acquisition, or sale
-        of assets, your data may be transferred, subject to the same privacy protections.
-      </li>
-    </ul>
-
-    <h2>5. Data Retention</h2>
-    <p>
-      We retain your personal information for as long as your account is active or as needed to
-      provide you with the App's services. You may request deletion of your account and associated
-      data at any time by contacting us (see Section 10). We will respond within 30 days.
-    </p>
-
-    <h2>6. Security</h2>
-    <p>
-      We implement industry-standard security measures – including encryption in transit (TLS)
-      and at rest – to protect your information. However, no method of transmission over the
-      internet is 100 % secure, and we cannot guarantee absolute security.
-    </p>
-
-    <h2>7. Children's Privacy</h2>
-    <p>
-      The App is not directed to children under the age of 13. We do not knowingly collect
-      personal information from children under 13. If you believe we have inadvertently collected
-      such information, please contact us immediately so we can delete it.
-    </p>
-
-    <h2>8. Third-Party Links and Services</h2>
-    <p>
-      The App may contain links to third-party websites or integrate third-party services (e.g.
-      mapping providers). We are not responsible for the privacy practices of those third parties
-      and encourage you to review their privacy policies.
-    </p>
-
-    <h2>9. Your Rights</h2>
-    <p>Depending on your jurisdiction, you may have the right to:</p>
-    <ul>
-      <li>Access the personal information we hold about you.</li>
-      <li>Request correction of inaccurate data.</li>
-      <li>Request deletion of your data ("right to be forgotten").</li>
-      <li>Object to or restrict certain processing activities.</li>
-      <li>Data portability – receive your data in a structured, machine-readable format.</li>
-    </ul>
-    <p>To exercise these rights, please contact us using the details in Section 10.</p>
-
-    <h2>10. Contact Us</h2>
-    <p>
-      If you have any questions, concerns, or requests regarding this Privacy Policy, please
-      contact us at:
-    </p>
-    <ul>
-      <li><strong>Email:</strong> <a href="mailto:privacy@triply.app">privacy@triply.app</a></li>
-    </ul>
-
-    <h2>11. Changes to This Policy</h2>
-    <p>
-      We may update this Privacy Policy from time to time. When we do, we will revise the
-      "Last updated" date at the top of this page. We encourage you to review this policy
-      periodically to stay informed about how we protect your information. Continued use of
-      the App after any changes constitutes your acceptance of the updated policy.
-    </p>
+    <p><strong>Short version:</strong> Triply is designed to help people share their live location only within a trip or activity group. Triply does not require an account, does not intentionally collect names, email addresses, phone numbers, contacts, photos, or payment information, and does not sell user data.</p>
   </div>
+
+  <h2>1. About Triply</h2>
+  <p>Triply is a privacy-first group location sharing application for trips, outdoor activities, events, and similar group coordination scenarios. Triply allows members of the same trip to see each other on a map while the trip is active.</p>
+
+  <h2>2. Information Triply Collects</h2>
+  <p>Triply collects only the information needed to provide the app's core functionality:</p>
+  <ul>
+    <li><strong>Location data:</strong> precise location while a user participates in a trip and chooses to share location.</li>
+    <li><strong>Trip information:</strong> trip identifiers, trip membership, invite codes or links, and basic trip state.</li>
+    <li><strong>Anonymous device or app identifier:</strong> a randomly generated identifier used to operate the service without requiring a user account.</li>
+    <li><strong>Operational data:</strong> basic technical logs needed to operate, secure, debug, and improve reliability of the service.</li>
+  </ul>
+
+  <h2>3. Information Triply Does Not Intentionally Collect</h2>
+  <p>Triply is designed to avoid unnecessary personal data collection. Triply does not intentionally collect:</p>
+  <ul>
+    <li>Names</li>
+    <li>Email addresses</li>
+    <li>Phone numbers</li>
+    <li>Address book or contacts</li>
+    <li>Photos or media files</li>
+    <li>Payment information</li>
+    <li>Advertising identifiers for advertising or profiling</li>
+  </ul>
+
+  <h2>4. How Triply Uses Information</h2>
+  <p>Triply uses collected information to:</p>
+  <ul>
+    <li>Show trip members on a live map.</li>
+    <li>Allow users to create, join, leave, and manage trips.</li>
+    <li>Keep trip location sharing working in real time.</li>
+    <li>Protect the service from misuse and technical failures.</li>
+    <li>Diagnose bugs and maintain app reliability.</li>
+  </ul>
+
+  <h2>5. Location Data</h2>
+  <p>Location sharing is the core functionality of Triply. When location sharing is active, location data is used to show the user's position to other members of the same trip. Location data is not intended to be public and is not intended to be shown to people outside the trip.</p>
+  <p>Users should only join trips with people they trust. Anyone with access to a valid trip invite may be able to join the trip depending on the current app functionality.</p>
+
+  <h2>6. Sharing of Information</h2>
+  <p>Triply does not sell user data. Triply does not share user data with advertising networks or data brokers.</p>
+  <p>Triply may use cloud infrastructure providers, such as Microsoft Azure, to host and operate the service. These providers process data only as needed to provide infrastructure, storage, security, and operational services for Triply.</p>
+
+  <h2>7. Data Retention</h2>
+  <p>Triply keeps trip and location data only for as long as reasonably needed to operate the service, maintain reliability, troubleshoot issues, and support active or recent trips. Triply may delete inactive trip data as part of normal service maintenance.</p>
+  <p>If a user leaves a trip, the user should no longer be shown as an active participant in that trip. Some technical records may remain for a limited period for security, reliability, or debugging purposes.</p>
+
+  <h2>8. User Choices and Deletion</h2>
+  <p>Users can stop sharing location by leaving a trip, disabling location permission for Triply in device settings, or uninstalling the app.</p>
+  <p>To request deletion of data associated with Triply, contact <a href="mailto:rehoricsapps@gmail.com">rehoricsapps@gmail.com</a>. Because Triply does not require accounts or collect names or email addresses, Triply may need information such as a trip identifier or device-generated identifier to locate relevant data.</p>
+
+  <h2>9. Security</h2>
+  <p>Triply uses reasonable technical and organizational measures to protect information against unauthorized access, loss, misuse, or alteration. No online service can guarantee perfect security.</p>
+
+  <h2>10. Children's Privacy</h2>
+  <p>Triply is not directed to children. Users should only use Triply if they are old enough to consent to location sharing under applicable laws or have appropriate permission from a parent or guardian.</p>
+
+  <h2>11. International Processing</h2>
+  <p>Triply may process information using cloud infrastructure located in countries different from the user's country. Where required, Triply will handle personal data in accordance with applicable privacy and data protection laws.</p>
+
+  <h2>12. Changes to This Policy</h2>
+  <p>Triply may update this Privacy Policy from time to time. The updated version will be posted on this page with a new "Last updated" date.</p>
+
+  <h2>13. Contact</h2>
+  <p>For privacy questions or deletion requests, contact <a href="mailto:rehoricsapps@gmail.com">rehoricsapps@gmail.com</a>.</p>
 </main>
 
-<footer>
-  &copy; 2026 Triply. All rights reserved.
-</footer>
+<footer class="site">&copy; 2026 Triply. Privacy-first location sharing for groups.</footer>
 
 </body>
 </html>

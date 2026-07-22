@@ -1,0 +1,12 @@
+{
+  "version": "0.2.1",
+  "configurations": [
+    {
+      "type": "default",
+      "name": "index.html (Launch in Browser)",
+      "executable": "C:\\Windows\\explorer.exe",
+      "args": "\"${workspaceRoot}\\index.html\"",
+      "currentDir": "${workspaceRoot}"
+    }
+  ]
+}
