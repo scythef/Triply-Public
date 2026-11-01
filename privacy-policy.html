@@ -33,21 +33,22 @@
     main { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
 
     header.top {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 1.5rem;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
       margin-bottom: 2rem;
+      background: linear-gradient(135deg, rgba(41,182,246,.12), rgba(142,111,206,.08));
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
     }
-    header.top img { width: 48px; height: 48px; border-radius: 12px; }
-    header.top .brand {
-      font-size: 1.4rem;
-      font-weight: 800;
-      background: linear-gradient(90deg, var(--green), var(--blue), var(--purple), var(--orange));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+    .brand-banner { display: block; }
+    .brand-banner img { display: block; width: 100%; height: auto; }
+    .brand-banner:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
+    .policy-heading { padding: clamp(18px, 4vw, 28px); }
+    .policy-heading .badges { margin-bottom: 0; }
+
+    @media (max-width: 480px) {
+      main { padding: 1.25rem 1rem 3rem; }
+      header.top { border-radius: 18px; }
     }
 
     h1 { font-size: clamp(28px, 5vw, 42px); margin: 0.5rem 0 0.3rem; }
@@ -83,13 +84,17 @@
 
 <main>
   <header class="top">
-    <img src="assets/icon.png" alt="PupanCo app icon">
-    <div class="brand">PupanCo</div>
+    <a class="brand-banner" href="index.html" aria-label="PupanCo home">
+      <img src="assets/PupanCo.png" width="1774" height="887"
+           alt="PupanCo. Go together. Stay connected. Share your location with your group during a trip."
+           fetchpriority="high">
+    </a>
+    <div class="policy-heading">
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last updated: 1 November 2026</p>
+      <div class="badges"><span class="badge">Privacy-First</span><span class="badge">Real-Time</span><span class="badge">Groups</span></div>
+    </div>
   </header>
-
-  <h1>Privacy Policy</h1>
-  <p class="last-updated">Last updated: 1 November 2026</p>
-  <div class="badges"><span class="badge">Privacy-First</span><span class="badge">Real-Time</span><span class="badge">Groups</span></div>
 
   <nav class="pages">
     <a href="index.html">Home</a>
